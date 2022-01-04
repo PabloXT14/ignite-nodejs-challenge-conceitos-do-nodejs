@@ -26,6 +26,12 @@ function checksExistsUserAccount(request, response, next) {
   return next();// função para continuar o fluxo normal da aplicação
 }
 
+
+/* ===== CRUD dos Todos ===== */
+/*
+  Create Read Update Delete (CRUD)
+*/
+
 /* Rota de criação de usuário */
 app.post('/users', (request, response) => {
   const { name, username } = request.body;
