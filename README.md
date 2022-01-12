@@ -3,7 +3,7 @@ Esta é uma aplicação NodeJS que simula a implementação de uma Todo List(lis
 
 Os objetivos principais foram treinar e aprimorar conceitos bases do NodeJS com a Biblioteca Express, como `criação de rotas`, `recebimento e envio de parâmetros do tipo Route, Query e Body` e `utilização de Middlewares`.
 
-Contudo, este é um projeto desenvolvido como Desafio do curso Ignite ReactJS da [Rocketseat](https://www.rocketseat.com.br/).
+Contudo, este é um projeto desenvolvido como Desafio do curso Ignite NodeJS da [Rocketseat](https://www.rocketseat.com.br/).
 
 ## 🏍 Deploy
 * Para executar o deploy do projeto basta acessar: **Em construção**
@@ -60,9 +60,9 @@ Contudo, este é um projeto desenvolvido como Desafio do curso Ignite ReactJS da
 * Após baixar rode o comando `yarn` no terminal dentro do diretório do projeto para baixar todas as dependências.
 * Depois de baixar as dependências siga os seguintes passos para execução do projeto:
     - `yarn dev`: para executar o servidor na base url `http://localhost:3333`.
-    ```
-    OBS: você pode utilizar o [Insômnia](https://insomnia.rest/download) para testar as rotas da aplicação
-    ```
+    > 🚨 OBS
+    > 
+    > Você pode utilizar o [Insômnia](https://insomnia.rest/download) para testar as rotas da aplicação
 
 
 
