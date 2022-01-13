@@ -1,12 +1,17 @@
 const express = require('express');
 const cors = require('cors');
-
 const { v4: uuidv4 } = require('uuid');
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocs = require('./swagger.json');
 
 const app = express();
 
+// Middleware do Swagger(rota para detalhes da documentação da API)
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs))
+
 app.use(cors());
 app.use(express.json());
+
 
 const users = [];
 

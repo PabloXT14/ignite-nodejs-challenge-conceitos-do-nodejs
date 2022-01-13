@@ -5,8 +5,6 @@ Os objetivos principais foram treinar e aprimorar conceitos bases do NodeJS com 
 
 Contudo, este é um projeto desenvolvido como Desafio do curso Ignite NodeJS da [Rocketseat](https://www.rocketseat.com.br/).
 
-## 🏍 Deploy
-* Para executar o deploy do projeto basta acessar: **Em construção**
 
 ## Routes
 * Veja as especificações de cada rota
