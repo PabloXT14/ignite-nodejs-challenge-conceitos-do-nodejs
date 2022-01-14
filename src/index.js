@@ -152,4 +152,11 @@ app.delete('/todos/:id', checksExistsUserAccount, (request, response) => {
   return response.status(204).json();
 });
 
+
+
+// Termos de Servico Swagger
+app.get('/terms', (request, response) => {
+  return response.json({ message: "Termos de Serviço" })
+});
+
 module.exports = app;

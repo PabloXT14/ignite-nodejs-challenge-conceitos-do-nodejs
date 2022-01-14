@@ -1,1 +1,84 @@
-{}
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API de Todo List",
+        "description": "Essa API tem como objetivo o gerenciamento de um usuário e seus todos(tarefas)",
+        "termsOfService": "http://localhost:3333/terms",
+        "contact": {
+            "email": "pabloxt14@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:3333/todos",
+            "description": "API de test"
+        },
+        {
+            "url": "http://www.github.io.conceitos-do-nodejs.com",
+            "description": "API de produção"
+        }
+    ],
+    "paths": {
+        "/users": {
+            "post": {
+                "summary": "Cadastro de usuário",
+                "description": "Essa rota é responsável pelo cadastro de um novo usuário",
+                "tags": [
+                    "Users"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/User"
+                            },
+                            "examples": {
+                                "user": {
+                                    "value": {
+                                        "name": "John Doe",
+                                        "username": "@john_doe"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "400": {
+                        "description": "This user alredy exists"
+                    },
+                    "201": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/User"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "User": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "username": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
