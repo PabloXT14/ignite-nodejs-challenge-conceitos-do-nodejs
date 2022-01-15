@@ -6,40 +6,6 @@ Os objetivos principais foram treinar e aprimorar conceitos bases do NodeJS com 
 Contudo, este é um projeto desenvolvido como Desafio do curso Ignite NodeJS da [Rocketseat](https://www.rocketseat.com.br/).
 
 
-## Routes
-* Veja as especificações de cada rota
-
-### /users(POST)
-* Descrição em andamento
-* Demonstration:
-<img src="./Demonstrations/Demonstration01-Rota-Create-Account.jpg" alt="Demostração Rota de criação de usuário">
-
-### /todos(GET)
-* Descrição em andamento
-* Demonstration:
-<img src="./Demonstrations/Demonstration02-Rota-Create-Todo.jpg" alt="Demostração Rota de criação de todo">
-
-### /todos(POST)
-* Descrição em andamento
-* Demonstration:
-<img src="./Demonstrations/Demonstration03-Rota-List-Todos.jpg" alt="Demostração Rota de listagem de todos">
-
-### /todos/:id(PUT)
-* Descrição em andamento
-* Demonstration:
-<img src="./Demonstrations/Demonstration04-Rota-Update-Todo.jpg" alt="Demostração Rota de atualização do todo">
-
-### /todos/:id/done(PATCH)
-* Descrição em andamento
-* Demonstration:
-<img src="./Demonstrations/Demonstration05-Rota-Conclued-Todo.jpg" alt="Demostração Rota de coclusão de todo">
-
-### /todos/:id(DELETE)
-* Descrição em andamento
-* Demonstration:
-<img src="./Demonstrations/Demonstration06-Rota-Delete-Todo.jpg" alt="Demostração Rota de deletar todo">
-
-
 ## 🚀 Technologies
 ✔ NodeJS
 <br>
@@ -51,6 +17,8 @@ Contudo, este é um projeto desenvolvido como Desafio do curso Ignite NodeJS da 
 <br>
 ✔ [Package uuid](https://www.npmjs.com/package/uuid)
 <br>
+✔ [Package Swagger](https://swagger.io/) (para criação da documentação da API)
+<br>
 ✔ IDE: VS Code
 
 ## ⚙ Settings
@@ -59,8 +27,33 @@ Contudo, este é um projeto desenvolvido como Desafio do curso Ignite NodeJS da 
 * Depois de baixar as dependências siga os seguintes passos para execução do projeto:
     - `yarn dev`: para executar o servidor na base url `http://localhost:3333`.
     > 🚨 OBS
-    > 
     > Você pode utilizar o [Insômnia](https://insomnia.rest/download) para testar as rotas da aplicação
 
 
+## Routes
+* Para saber mais detalhes sobre parâmetros e outras coisas de cada rota, após iniciar o servidor com `yarn dev` acesse no seu navegador a rota `http://localhost:3333/api-docs`, esta rota irá retornar a documentação da API com Swagger, (obs: esta documentação também permite realizar testes das rotas por ela).
+
+### /users(POST)
+* Demonstration:
+<img src="./Demonstrations/Demonstration01-Rota-Create-Account.jpg" alt="Demostração Rota de criação de usuário">
+
+### /todos(GET)
+* Demonstration:
+<img src="./Demonstrations/Demonstration02-Rota-Create-Todo.jpg" alt="Demostração Rota de criação de todo">
+
+### /todos(POST)
+* Demonstration:
+<img src="./Demonstrations/Demonstration03-Rota-List-Todos.jpg" alt="Demostração Rota de listagem de todos">
+
+### /todos/:id(PUT)
+* Demonstration:
+<img src="./Demonstrations/Demonstration04-Rota-Update-Todo.jpg" alt="Demostração Rota de atualização do todo">
+
+### /todos/:id/done(PATCH)
+* Demonstration:
+<img src="./Demonstrations/Demonstration05-Rota-Conclued-Todo.jpg" alt="Demostração Rota de coclusão de todo">
+
+### /todos/:id(DELETE)
+* Demonstration:
+<img src="./Demonstrations/Demonstration06-Rota-Delete-Todo.jpg" alt="Demostração Rota de deletar todo">
 

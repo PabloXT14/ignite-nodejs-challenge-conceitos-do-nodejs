@@ -11,12 +11,12 @@
     },
     "servers": [
         {
-            "url": "http://localhost:3333/todos",
+            "url": "http://localhost:3333",
             "description": "API de test"
         },
         {
             "url": "http://www.github.io.conceitos-do-nodejs.com",
-            "description": "API de produção"
+            "description": "API de produção (não esta funcionando)"
         }
     ],
     "paths": {
@@ -25,7 +25,7 @@
                 "summary": "Cadastro de usuário",
                 "description": "Essa rota é responsável pelo cadastro de um novo usuário",
                 "tags": [
-                    "Users"
+                    "User"
                 ],
                 "requestBody": {
                     "content": {
@@ -45,9 +45,6 @@
                     }
                 },
                 "responses": {
-                    "400": {
-                        "description": "This user alredy exists"
-                    },
                     "201": {
                         "description": "OK",
                         "content": {
@@ -58,8 +55,75 @@
                                 }
                             }
                         }
+                    },
+                    "400": {
+                        "description": "This user alredy exists"
                     }
                 }
+            }
+        },
+        "/todos": {
+            "post": {
+                "summary": "Criar um todo",
+                "description": "Essa rota é responsável pelo cadastro de um novo todo",
+                "tags": [
+                    "Todo"
+                ],
+                "parameters": {
+                    "in": "header",
+                    "name": "username",
+                    "type": "string"
+                },
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "$ref": "#/components/schemas/Todo"
+                            },
+                            "examples": {
+                                "todo": {
+                                    "value": {
+                                        "title": "Clean the dishes",
+                                        "deadline": "2022-01-15-00-00-00"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "OK",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "$ref": "#/components/schemas/Todo"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "User not found"
+                    }
+                }
+            },
+            "get": {
+                "summary": "Lista todos os todos",
+                "description": "Essa rota é responsável por listar todos os 'todos' de um usuário",
+                "tags": [
+                    "Todo"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {},
+                            "examples": {}
+                        }
+                    }
+                },
+                "responses": {}
             }
         }
     },
@@ -68,14 +132,37 @@
             "User": {
                 "type": "object",
                 "properties": {
+                    "id": {
+                        "type": "string"
+                    },
                     "name": {
                         "type": "string"
                     },
                     "username": {
                         "type": "string"
                     },
+                    "todos": {
+                        "type": "array"
+                    }
+                }
+            },
+            "Todo": {
+                "type": "object",
+                "properties": {
                     "id": {
                         "type": "string"
+                    },
+                    "title": {
+                        "type": "string"
+                    },
+                    "done": {
+                        "type": "boolean"
+                    },
+                    "deadline": {
+                        "type": "date"
+                    },
+                    "created_at": {
+                        "type": "date"
                     }
                 }
             }
