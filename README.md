@@ -17,9 +17,7 @@ Contudo, este é um projeto desenvolvido como Desafio do curso Ignite NodeJS da 
 <br>
 ✔ [Package uuid](https://www.npmjs.com/package/uuid)
 <br>
-✔ [Package Swagger](https://swagger.io/) (para criação da documentação da API)
-<br>
-✔ IDE: VS Code
+✔ [VS Code](https://code.visualstudio.com/)
 
 ## ⚙ Settings
 * Para executar o projeto você deve baixar os arquivos ou dar um `git clone` do repositório.
@@ -31,7 +29,6 @@ Contudo, este é um projeto desenvolvido como Desafio do curso Ignite NodeJS da 
 
 
 ## Routes
-* Para saber mais detalhes sobre parâmetros e outras coisas de cada rota, após iniciar o servidor com `yarn dev` acesse no seu navegador a rota `http://localhost:3333/api-docs`, esta rota irá retornar a documentação da API com Swagger, (obs: esta documentação também permite realizar testes das rotas por ela).
 
 ### /users(POST)
 * Demonstration:
